@@ -2,6 +2,8 @@
 
 ## Establish Secure Connection between two  Ubuntu Containers using SSH
 
+![Screenshot_2025-02-16-00-40-11-24_f9ee0578fe1cc94de7482bd41accb329](https://github.com/user-attachments/assets/552e8066-6b35-4954-8420-d64f9711a98c)
+
 ### Step 1: Run Docker Image
 ```bash
 docker pull ubuntu
@@ -79,3 +81,4 @@ service ssh start
 - At this point, you have successfully established an SSH connection from `container2` to `container1`. This setup allows for secure command execution and data transfer between containers.
 
 This detailed breakdown explains the purpose and function of each command used in setting up SSH connections between Docker containers running Ubuntu.
+

@@ -12,6 +12,8 @@ docker image
 - `docker pull ubuntu`: This command pulls the latest Ubuntu image from the Docker Hub repository. It ensures you have the most recent version of the Ubuntu container.
 - `docker image`: Lists all the Docker images available on your local machine. This is used to verify that the Ubuntu image has been successfully downloaded.
 
+![alt text](<Screenshot 2025-02-16 at 1.22.55 AM.png>)
+
 ### Step 2: Create New Directory
 ```bash
 mkdir Docker-Projects
@@ -21,6 +23,8 @@ docker run -it --name container1 ubuntu
 - `mkdir Docker-Projects`: Creates a new directory named `Docker-Projects` where you can organize project-related files.
 - `cd Docker-Projects`: Changes the current directory to `Docker-Projects`.
 - `docker run -it --name container1 ubuntu`: Runs a new container from the Ubuntu image with interactive terminals (`-it`) and names it `container1`.
+
+![alt text](<Screenshot 2025-02-16 at 1.36.05 AM.png>)
 
 ### Step 3: Configure SSH
 ```bash
@@ -33,6 +37,8 @@ nano /etc/ssh/sshd_config
 - `apt-get install openssh-server`: Installs the OpenSSH server which allows secure remote connections.
 - `apt-get install nano`: Installs Nano, a simple text editor used for editing configuration files.
 - `nano /etc/ssh/sshd_config`: Opens the SSH configuration file for editing. Here, you would uncomment and modify certain lines, such as enabling root login (`PermitRootLogin yes`).
+
+![alt text](<Screenshot 2025-02-16 at 1.42.16 AM.png>)
 
 ### Step 4: Create 2nd Container
 ```bash
@@ -68,6 +74,8 @@ ssh root@<IPAddress>
 - `docker exec -it container2 bash` and `docker start container2`: Similar to step 5, ensures `container2` is running and you have a bash shell open.
 - `ssh root@<IPAddress>`: Connects to `container1` from `container2` using SSH.
 
+![alt text](<Screenshot 2025-02-16 at 1.54.03 AM.png>)
+
 ### Step 7: Check whether the container 1 is running or not
 ```bash
 docker exec -it container1 bash
@@ -77,8 +85,11 @@ service ssh start
 - `service --status-all`: Lists all services and their status in `container1`.
 - `service ssh start`: Starts the SSH service if it's not already running.
 
+![alt text](<Screenshot 2025-02-16 at 1.55.59 AM.png>)
+
 ### Step 8: Successfully connected 2 Ubuntu containers using SSH
 - At this point, you have successfully established an SSH connection from `container2` to `container1`. This setup allows for secure command execution and data transfer between containers.
 
-This detailed breakdown explains the purpose and function of each command used in setting up SSH connections between Docker containers running Ubuntu.
+![alt text](<Screenshot 2025-02-16 at 1.57.08 AM.png>)
+
 
